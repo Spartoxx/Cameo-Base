@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+
+
+
+
+
+.menu {
+
+  margin-top: -100px;
+
+}
+
+
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  width: 35px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: all 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+    opacity: 50%;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: grey;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 100px;
+  height: 600px;
+  margin: -60px 0 0 -50px;
+  padding: 50px;
+  padding-top: auto 160px;
+  border-radius: 10px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-95%, 0);
+  
+  transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+#menu:hover {
+
+  background: #1C1C1C;
+  height: 200px;
+
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: translate(2%, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0; 
+}
+
+
+iframe {
+  width: 332px;
+  height: 500px;
+  border: none;
+
+}
+
+
+
+dashboard, music-player, contact, status  {
+    background: -webkit-linear-gradient(110deg, #ca3333, #2789c7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 100%;
+    cursor: pointer;
+    transition: opacity 75ms;
+}
+
+.name {
+  display: block;
+  margin-top: auto 3px;
+  margin-left: 80%;
+
+}
+
+
+.headband {
+  background: linear-gradient(110deg, purple, yellow, #1e98e9, #f34242);
+  height: 100px;
+  width: 100%;
+  transition: all .25s ease-in-out;
+  align: center;
+
+
+}
+
+
+
+
+
+
+body {
+ 
+  font-family: 'Roboto', sans-serif;
+  background: #171C28;
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+p {
+  max-width: 1200px;
+  margin: auto 15%;
+  line-height: 1.1;
+  font-size: 78px;
+  font-weight: 700;
+  letter-spacing: .0125em;
+  color: #fff;
+}
+
+underline {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  z-index: 1;
+}
+
+underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: .07em;
+  height: .1em;
+  width: 100%;
+  background: linear-gradient(110deg, #e1f549, #29d0be, #6cb8ea, #ff5959);
+  z-index: -1;
+  transition: height .25s cubic-bezier(.6,0,.4,1);
+}
+
+a:link {
+
+text-decoration: none;
+
+} 
+
+underline:hover::after {
+  height: .2em;
+}
+
+@media (max-width: 1199px) {
+  p {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 991px) {
+  p {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 767px) {
+  p {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 575px) {
+  p {
+    font-size: 26px;
+  }
+}
