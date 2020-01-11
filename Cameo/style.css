@@ -35,10 +35,7 @@
   transition: all 0.3s ease;
 }
 
-#menuToggle a:hover
-{
-    opacity: 50%;
-}
+
 
 
 #menuToggle input
@@ -206,6 +203,11 @@ dashboard, music-player, contact, status  {
     opacity: 100%;
     cursor: pointer;
     transition: opacity 75ms;
+}
+dashboard:hover, music-player:hover, contact:hover, status:hover  {
+
+    opacity: 50%;
+
 }
 
 .name {
