@@ -204,7 +204,7 @@ dashboard, music-player, contact, status  {
     cursor: pointer;
     transition: opacity 75ms;
 }
-dashboard:hover, music-player:hover, contact:hover, status:hover  {
+dashboard:hover  {
 
     opacity: 50%;
 
