@@ -200,7 +200,7 @@ dashboard, music-player, contact, status  {
     background: -webkit-linear-gradient(110deg, #ca3333, #2789c7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: 100%;
+   
     cursor: pointer;
     transition: opacity 75ms;
 }
